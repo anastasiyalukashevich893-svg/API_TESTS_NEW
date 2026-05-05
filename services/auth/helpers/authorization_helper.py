@@ -8,12 +8,10 @@ class AuthorizationHelper(BaseHelper):
     REGISTER_ENDPOINT = f"{ENDPOINT_PREFIX}/register/"
     LOGIN_ENDPOINT = f"{ENDPOINT_PREFIX}/login/"
 
-
-
-    def post_register(self, data: dict)-> requests.Response:
+    def post_register(self, data: dict) -> requests.Response:
         response = self.api_utils.post(self.REGISTER_ENDPOINT, data=data)
         return response
 
-    def post_login(self, data: dict)-> requests.Response:
+    def post_login(self, data: dict) -> requests.Response:
         response = self.api_utils.post(self.LOGIN_ENDPOINT, data=data)
         return response
