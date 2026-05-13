@@ -1,6 +1,6 @@
 from enum import StrEnum
 
-from pydantic import BaseModel, ConfigDict, EmailStr
+from pydantic import BaseModel, ConfigDict
 
 
 class SubjectEnum(StrEnum):
@@ -12,7 +12,7 @@ class SubjectEnum(StrEnum):
 
 
 class BaseTeacher(BaseModel):
-    model_config = ConfigDict(extra='forbid')
+    model_config = ConfigDict(extra="forbid")
 
     first_name: str
     last_name: str

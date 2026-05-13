@@ -1,0 +1,18 @@
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 113' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=meghan78&password=r%259AhyLFjx6DLs5&password_repeat=r%259AhyLFjx6DLs5&email=marshallalexis%40example.org' http://auth:8000/auth/register/
+INFO     logger:logger.py:32 Response status code: '201', elapsed_time: '0:00:00.259987'
+ {
+  "detail": "User registered"
+}
+
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 44' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=meghan78&password=r%259AhyLFjx6DLs5' http://auth:8000/auth/login/
+INFO     logger:logger.py:32 Response status code: '200', elapsed_time: '0:00:00.332673'
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoibWVnaGFuNzgiLCJleHAiOjE3Nzg2ODg5MzAsImlhdCI6MTc3ODY4MTczMH0.ioebWXjjS1CERRpIGoGsUUxuCxy1kkhAJp327b7-__pEnIsogGWjVBebe5nV2TDmORtZq417BNOpWAnG8ZOBFqteTvty9taqi42vKAp3BF186lfPnFZWGt52VVKhwcEVoUxbIdDi6tirNYG9MqFI1GR9vgh-hq2959uQJ0SS1o-d20uHa-uTlwEnbQSCW2dOmMiTjadFieikDFNMOSF_dZmf1ZZBtUzvCqVhIXnObKurkiGPFFYwVGER3vqTo2avTkGjaXXz5WMxBR5YKwfgSOFRkCMzM34kObVWM5ln3SXlyUNklUOkIea8R_Ii9gh33bqGRxmSEr5EYvCsJVuSfw",
+  "token_type": "Bearer"
+}
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 44' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=meghan78&password=r%259AhyLFjx6DLs5' http://auth:8000/auth/login/
+INFO     logger:logger.py:32 Response status code: '200', elapsed_time: '0:00:00.305074'
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoibWVnaGFuNzgiLCJleHAiOjE3Nzg2ODg5MzEsImlhdCI6MTc3ODY4MTczMX0.RFG8mtibm9UCS-WTFe9KijPoPm3nm8NS_bDFMRjrgyUhv3UQGdPBVHmOivAUOp4RG5RmHVhznKsvrXM9SKvoTNc_XJr-qGUZ9jaBzTTlrKtb4Y1apo4RjBrmnu2IZr33EpEFTnHmbZk2M30NsUaDLNhdNpbvXoiRd50pJl741qtnFaz__jLuO2bzDmbtwaz4XS5CnZ21cz5DLApkYOxpfQOekiD5W2mSYLDF5z5TzKJfooonEOSu-om9jr8Gv3uHVUvBsalftLli5PIDNUm8l6mnOOq1OjWGvCAS1eO6ZjhhNFQyQ1G91CSwJ3TODAeBSsqFr9t5VurRESXFowjc-w",
+  "token_type": "Bearer"
+}

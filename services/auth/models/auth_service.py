@@ -9,7 +9,7 @@ from utils.api_utils import ApiUtils
 
 
 class AuthService(BaseService):
-    SERVICE_URL = "http://localhost:8000"
+    SERVICE_URL = "http://auth:8000"
 
     def __init__(self, api_utils: ApiUtils):
         super().__init__(api_utils)

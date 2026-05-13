@@ -16,7 +16,7 @@ from utils.api_utils import ApiUtils
 
 
 class UniversityService(BaseService):
-    SERVICE_URL = "http://localhost:8001"
+    SERVICE_URL = "http://university:8000"
 
     def __init__(self, api_utils: ApiUtils):
         super().__init__(api_utils)
@@ -27,28 +27,23 @@ class UniversityService(BaseService):
         self.grade_helper = GradeHelper(self.api_utils)
 
     def create_group(self, group_request: GroupRequest) -> GroupResponse:
-        response = self.group_helper.post_group(json = group_request.model_dump())
+        response = self.group_helper.post_group(json=group_request.model_dump())
         return GroupResponse(**response.json())
 
-
     def create_student(self, student_request: StudentRequest) -> StudentResponse:
-        response = self.student_helper.post_student(json = student_request.model_dump())
+        response = self.student_helper.post_student(json=student_request.model_dump())
         return StudentResponse(**response.json())
 
     def create_teacher(self, teacher_request: TeacherRequest) -> TeacherResponse:
-        response = self.teacher_helper.post_teacher(json = teacher_request.model_dump())
+        response = self.teacher_helper.post_teacher(json=teacher_request.model_dump())
         return TeacherResponse(**response.json())
 
     def create_grade(self, grade_request: GradeRequest) -> GradeResponse:
         response = self.grade_helper.post_grade(data=grade_request.model_dump())
         return GradeResponse(**response.json())
 
-    def get_grade(self, student_id=None,
-                  teacher_id=None,
-                  group_id=None) -> GradeStaticResponse:
+    def get_grade(self, student_id=None, teacher_id=None, group_id=None) -> GradeStaticResponse:
         response = self.grade_helper.get_stat(
-            student_id=student_id,
-            teacher_id=teacher_id,
-            group_id=group_id
+            student_id=student_id, teacher_id=teacher_id, group_id=group_id
         )
         return GradeStaticResponse(**response.json())

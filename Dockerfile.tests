@@ -1,0 +1,23 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+
+COPY requirements.txt ./
+
+
+RUN pip install --no-cache-dir -r requirements.txt  pytest allure-pytest ruff
+
+
+COPY services/ ./services/
+COPY utils/ ./utils/
+COPY logger/ ./logger/
+COPY tests/ ./tests/
+COPY tests/conftest.py ./tests/
+
+RUN mkdir -p /app/allure-results
+
+CMD ["pytest", "tests/", "-v", "--alluredir=/app/allure-results"]

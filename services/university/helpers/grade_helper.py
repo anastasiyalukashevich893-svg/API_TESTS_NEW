@@ -1,5 +1,4 @@
 import requests
-import json
 
 from services.general.helpers.base_helper import BaseHelper
 
@@ -9,13 +8,11 @@ class GradeHelper(BaseHelper):
     ROOT_ENDPOINT = f"{ENDPOINT_PREFIX}/"
     STATS_ENDPOINT = f"{ENDPOINT_PREFIX}/stats/"
 
-
-
-    def post_grade (self, data: dict)-> requests.Response:
+    def post_grade(self, data: dict) -> requests.Response:
         response = self.api_utils.post(self.ROOT_ENDPOINT, data=data)
         return response
 
-    def get_stat (self, teacher_id = None, student_id = None, group_id = None)-> requests.Response:
+    def get_stat(self, teacher_id=None, student_id=None, group_id=None) -> requests.Response:
         params = {}
         if student_id is not None:
             params["student_id"] = student_id

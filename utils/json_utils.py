@@ -1,5 +1,6 @@
 import json
 
+
 class JsonUtils:
     @staticmethod
     def is_json(obj: str) -> bool:

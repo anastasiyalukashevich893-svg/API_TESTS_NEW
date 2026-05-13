@@ -1,13 +1,13 @@
 import random
-from services.university.models.base_grade import MinMaxGrade, GradesCount
+
+from services.university.models.base_grade import GradesCount, MinMaxGrade
 from services.university.models.grade_request import GradeRequest
 from services.university.models.university_service import UniversityService
 from utils.soft_assert import SoftAssert
 
 
 class TestGradeStatistics:
-    def test_grades_students(self, university_api_utils_admin, create_teacher,
-                             student_factory):
+    def test_grades_students(self, university_api_utils_admin, create_teacher, student_factory):
         university_service = UniversityService(university_api_utils_admin)
         students = [student_factory() for _ in range(3)]
         all_grades = []
@@ -24,9 +24,7 @@ class TestGradeStatistics:
 
                 university_service.create_grade(
                     GradeRequest(
-                        teacher_id=create_teacher.id,
-                        student_id=student.id,
-                        grade=grade_value
+                        teacher_id=create_teacher.id, student_id=student.id, grade=grade_value
                     )
                 )
 

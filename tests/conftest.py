@@ -1,6 +1,8 @@
 import random
-from faker import Faker
+
 import pytest
+from faker import Faker
+
 from services.auth.models.auth_service import AuthService
 from services.auth.models.login_request import LoginRequest
 from services.auth.models.register_request import RegisterRequest
@@ -33,24 +35,24 @@ def university_api_utils_anonym():
 def registered_user(auth_api_utils_anonym):
     auth_service = AuthService(auth_api_utils_anonym)
     username = faker.user_name()
-    password = faker.password(length=15,
-                              special_chars=True,
-                              digits=True,
-                              upper_case=True,
-                              lower_case=True)
+    password = faker.password(
+        length=15, special_chars=True, digits=True, upper_case=True, lower_case=True
+    )
     email = faker.email()
-    auth_service.register_user(register_request=RegisterRequest(username=username,
-                                                                password=password,
-                                                                password_repeat=password,
-                                                                email=email))
-    login_response = auth_service.login_user(login_request=LoginRequest(username=username,
-                                                                        password=password))
+    auth_service.register_user(
+        register_request=RegisterRequest(
+            username=username, password=password, password_repeat=password, email=email
+        )
+    )
+    login_response = auth_service.login_user(
+        login_request=LoginRequest(username=username, password=password)
+    )
     return {
         "username": username,
         "password": password,
         "email": email,
         "access_token": login_response.access_token,
-        "token_type": login_response.token_type
+        "token_type": login_response.token_type,
     }
 
 
@@ -61,22 +63,28 @@ def access_token(registered_user):
 
 @pytest.fixture(scope="function", autouse=False)
 def auth_api_utils_admin(access_token):
-    api_utils = ApiUtils(url=AuthService.SERVICE_URL, headers={"Authorization": f"Bearer {access_token}"})
+    api_utils = ApiUtils(
+        url=AuthService.SERVICE_URL, headers={"Authorization": f"Bearer {access_token}"}
+    )
     return api_utils
 
 
 @pytest.fixture(scope="function", autouse=False)
 def university_api_utils_admin(access_token):
-    api_utils = ApiUtils(url=UniversityService.SERVICE_URL, headers={"Authorization": f"Bearer {access_token}"})
+    api_utils = ApiUtils(
+        url=UniversityService.SERVICE_URL, headers={"Authorization": f"Bearer {access_token}"}
+    )
     return api_utils
 
 
 @pytest.fixture(scope="function", autouse=False)
 def create_teacher(university_api_utils_admin):
     university_service_teacher = UniversityService(university_api_utils_admin)
-    teacher = TeacherRequest(first_name=faker.first_name(),
-                             last_name=faker.last_name(),
-                             subject=random.choice([option for option in SubjectEnum]))
+    teacher = TeacherRequest(
+        first_name=faker.first_name(),
+        last_name=faker.last_name(),
+        subject=random.choice([option for option in SubjectEnum]),
+    )
     teacher_response = university_service_teacher.create_teacher(teacher_request=teacher)
     return teacher_response
 
@@ -92,12 +100,14 @@ def create_group(university_api_utils_admin):
 @pytest.fixture(scope="function", autouse=False)
 def create_student(university_api_utils_admin, create_group):
     university_service_student = UniversityService(university_api_utils_admin)
-    student = StudentRequest(first_name=faker.first_name(),
-                             last_name=faker.last_name(),
-                             email=faker.email(),
-                             degree=random.choice([option for option in DegreeEnum]),
-                             phone=faker.numerify("+7##########"),
-                             group_id=create_group.id)
+    student = StudentRequest(
+        first_name=faker.first_name(),
+        last_name=faker.last_name(),
+        email=faker.email(),
+        degree=random.choice([option for option in DegreeEnum]),
+        phone=faker.numerify("+7##########"),
+        group_id=create_group.id,
+    )
     student_response = university_service_student.create_student(student_request=student)
     return student_response
 
@@ -106,11 +116,9 @@ def create_student(university_api_utils_admin, create_group):
 def create_grade(university_api_utils_admin, create_teacher, create_student):
     university_service = UniversityService(university_api_utils_admin)
     grade_value = random.randint(MinMaxGrade.MIN_GRADE, MinMaxGrade.MAX_GRADE)
-    grade_response = university_service.create_grade(GradeRequest(
-        teacher_id=create_teacher.id,
-        student_id=create_student.id,
-        grade=grade_value
-    ))
+    grade_response = university_service.create_grade(
+        GradeRequest(teacher_id=create_teacher.id, student_id=create_student.id, grade=grade_value)
+    )
     return grade_response
 
 
@@ -124,7 +132,7 @@ def student_factory(university_api_utils_admin, create_group):
             email=faker.email(),
             degree=random.choice([option.value for option in DegreeEnum]),
             phone=faker.numerify("+7##########"),
-            group_id=create_group.id
+            group_id=create_group.id,
         )
         return university_service.create_student(student_request=student)
 

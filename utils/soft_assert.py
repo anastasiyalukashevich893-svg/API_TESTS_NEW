@@ -8,4 +8,4 @@ class SoftAssert:
 
     def assert_all(self):
         if self.errors:
-            raise AssertionError(f"Soft assertions failed:\n  - " + "\n  - ".join(self.errors))
+            raise AssertionError("Soft assertions failed:\n  - " + "\n  - ".join(self.errors))

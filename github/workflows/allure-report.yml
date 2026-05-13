@@ -1,0 +1,54 @@
+name: Generate Allure Report
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  test-and-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Start services
+        run: docker-compose up -d auth university
+
+      - name: Wait for services
+        run: |
+          sleep 10
+          curl --retry 30 --retry-delay 2 http://localhost:8000/health || true
+          curl --retry 30 --retry-delay 2 http://localhost:8001/health || true
+
+      - name: Run tests with Allure
+        run: pytest tests/ -v --alluredir=allure-results
+
+      - name: Stop services
+        if: always()
+        run: docker-compose down
+
+      - name: Install Allure
+        run: |
+          wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.tgz
+          tar -zxvf allure-2.27.0.tgz -C /opt/
+          sudo ln -s /opt/allure-2.27.0/bin/allure /usr/local/bin/allure
+
+      - name: Generate Allure Report
+        run: allure generate allure-results -o allure-report --clean
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          publish_branch: gh-pages

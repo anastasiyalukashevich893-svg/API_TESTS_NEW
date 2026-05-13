@@ -12,11 +12,13 @@ faker = Faker()
 class TestTeacherCreate:
     def test_teacher_create(self, university_api_utils_admin):
         teacher_helper = TeacherHelper(api_utils=university_api_utils_admin)
-        teacher_response = teacher_helper.post_teacher({"first_name": faker.first_name(),
-                                                        "last_name":faker.last_name(),
-                                                       "subject": random.choice([option for option in SubjectEnum])})
+        teacher_response = teacher_helper.post_teacher({
+            "first_name": faker.first_name(),
+            "last_name": faker.last_name(),
+            "subject": random.choice([option for option in SubjectEnum]),
+        })
 
-        assert teacher_response.status_code == requests.codes.created, \
-            (f"Wrong status code. Actual :'{teacher_response.status_code}',"
-             f" but expected: '{requests.codes.created}'")
-
+        assert teacher_response.status_code == requests.codes.created, (
+            f"Wrong status code. Actual :'{teacher_response.status_code}',"
+            f" but expected: '{requests.codes.created}'"
+        )

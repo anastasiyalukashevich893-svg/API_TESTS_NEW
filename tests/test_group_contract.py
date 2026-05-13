@@ -1,5 +1,4 @@
 import requests.status_codes
-
 from faker import Faker
 
 from services.university.helpers.group_helper import GroupHelper
@@ -12,6 +11,7 @@ class TestGroupContract:
         group_helper = GroupHelper(api_utils=university_api_utils_anonym)
         response = group_helper.post_group({"name": faker.name()})
 
-        assert response.status_code == requests.codes.unauthorized, \
-            (f"Wrong status code. Actual :'{response.status_code}',"
-             f" but expected: '{requests.codes.unauthorized}'")
+        assert response.status_code == requests.codes.unauthorized, (
+            f"Wrong status code. Actual :'{response.status_code}',"
+            f" but expected: '{requests.codes.unauthorized}'"
+        )
