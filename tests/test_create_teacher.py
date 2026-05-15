@@ -15,7 +15,7 @@ class TestTeacherCreate:
         teacher_response = teacher_helper.post_teacher({
             "first_name": faker.first_name(),
             "last_name": faker.last_name(),
-            "subject": random.choice([option for option in SubjectEnum]),
+            "subject": random.choice(list(SubjectEnum)),
         })
 
         assert teacher_response.status_code == requests.codes.created, (

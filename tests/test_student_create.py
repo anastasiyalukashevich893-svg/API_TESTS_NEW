@@ -19,7 +19,7 @@ class TestStudent:
             first_name=faker.first_name(),
             last_name=faker.last_name(),
             email=faker.email(),
-            degree=random.choice([option for option in DegreeEnum]),
+            degree=random.choice(list(DegreeEnum)),
             phone=faker.numerify("+7##########"),
             group_id=group_response.id,
         )
