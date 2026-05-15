@@ -11,7 +11,7 @@ class TestGroupContract:
         group_helper = GroupHelper(api_utils=university_api_utils_anonym)
         response = group_helper.post_group({"name": faker.name()})
 
-        assert response.status_code == requests.codes.unauthorized, (
+        assert response.status_code == requests.codes.forbidden, (
             f"Wrong status code. Actual :'{response.status_code}',"
-            f" but expected: '{requests.codes.unauthorized}'"
+            f" but expected: '{requests.codes.forbidden}'"
         )

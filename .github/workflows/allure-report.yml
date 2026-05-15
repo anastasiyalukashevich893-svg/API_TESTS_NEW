@@ -63,9 +63,9 @@ jobs:
 
       - name: Install Allure
         run: |
-          wget https://github.com
-          tar -zxvf allure-2.27.0.tgz -C /opt/
-          sudo ln -s /opt/allure-2.27.0/bin/allure /usr/local/bin/allure
+            wget https://github.com
+            tar -zxvf allure-2.27.0.tgz -C /opt/
+            sudo ln -s /opt/allure-2.27.0/bin/allure /usr/local/bin/allure
 
       - name: Generate Allure Report
         run: allure generate allure-results -o allure-report --clean
