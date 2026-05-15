@@ -32,14 +32,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Одновременный запуск всей инфраструктуры и тестов.
-      # Ваши фикстуры внутри контейнера tests сами дождутся готовности API-сервисов.
+
       - name: Run automated tests in Docker Compose
-        run: docker-compose up --build --exit-code-from tests
+        run: docker compose up --build --exit-code-from tests
 
       - name: Stop all services
         if: always()
-        run: docker-compose down
+        run: docker compose down
 
       - name: Upload allure results
         if: always()
