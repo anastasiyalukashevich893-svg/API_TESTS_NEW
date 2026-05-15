@@ -83,7 +83,7 @@ def create_teacher(university_api_utils_admin):
     teacher = TeacherRequest(
         first_name=faker.first_name(),
         last_name=faker.last_name(),
-        subject=random.choice([option for option in SubjectEnum]),
+        subject=random.choice(list(SubjectEnum)),
     )
     teacher_response = university_service_teacher.create_teacher(teacher_request=teacher)
     return teacher_response
@@ -104,7 +104,7 @@ def create_student(university_api_utils_admin, create_group):
         first_name=faker.first_name(),
         last_name=faker.last_name(),
         email=faker.email(),
-        degree=random.choice([option for option in DegreeEnum]),
+        degree=random.choice(list(DegreeEnum)),
         phone=faker.numerify("+7##########"),
         group_id=create_group.id,
     )
@@ -130,7 +130,7 @@ def student_factory(university_api_utils_admin, create_group):
             first_name=faker.first_name(),
             last_name=faker.last_name(),
             email=faker.email(),
-            degree=random.choice([option.value for option in DegreeEnum]),
+            degree=random.choice(list(DegreeEnum)),
             phone=faker.numerify("+7##########"),
             group_id=create_group.id,
         )
