@@ -1,0 +1,30 @@
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 116' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=gonzalezmichael&password=NZ6VAaldQ%231r2cV&password_repeat=NZ6VAaldQ%231r2cV&email=gibsongina%40example.net' http://auth:8000/auth/register/
+INFO     logger:logger.py:32 Response status code: '201', elapsed_time: '0:00:00.276839'
+ {
+  "detail": "User registered"
+}
+
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 51' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=gonzalezmichael&password=NZ6VAaldQ%231r2cV' http://auth:8000/auth/login/
+INFO     logger:logger.py:32 Response status code: '200', elapsed_time: '0:00:00.323810'
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIxLCJ1c2VybmFtZSI6ImdvbnphbGV6bWljaGFlbCIsImV4cCI6MTc3ODc3MjE1OSwiaWF0IjoxNzc4NzY0OTU5fQ.WRSFeR79TcY5XGBnCL3HlgvhAjChdu-qrjt9LIuUGmmeQzAq_eFzwIVcO9dGLUD0xjnkEj4RE2_ds6UuEEuUsC49YGI7zxwGnJJd37ddSn1lchWX0KC1NttwkRwkKYUhUUuWeLU6QqORMcVZS13PFJuvrw4Ej3SdLi87TY5e-VjMj67--Dn2eb6MkOZkDN58gPU1yvyPjD7Id2t2_HYNujYHThSuQzDMhQ0omlhgL3wIcWu48IB6DnSyChEizPFWhcz_B7EBMWUm-LYZax6KMenF0E7k54sYHFR1a6L9yMA8iWmsWmj6GGq2_zrdSbmTIN4POrn5BFeas3cAWEgFcA",
+  "token_type": "Bearer"
+}
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIxLCJ1c2VybmFtZSI6ImdvbnphbGV6bWljaGFlbCIsImV4cCI6MTc3ODc3MjE1OSwiaWF0IjoxNzc4NzY0OTU5fQ.WRSFeR79TcY5XGBnCL3HlgvhAjChdu-qrjt9LIuUGmmeQzAq_eFzwIVcO9dGLUD0xjnkEj4RE2_ds6UuEEuUsC49YGI7zxwGnJJd37ddSn1lchWX0KC1NttwkRwkKYUhUUuWeLU6QqORMcVZS13PFJuvrw4Ej3SdLi87TY5e-VjMj67--Dn2eb6MkOZkDN58gPU1yvyPjD7Id2t2_HYNujYHThSuQzDMhQ0omlhgL3wIcWu48IB6DnSyChEizPFWhcz_B7EBMWUm-LYZax6KMenF0E7k54sYHFR1a6L9yMA8iWmsWmj6GGq2_zrdSbmTIN4POrn5BFeas3cAWEgFcA' -H 'Content-Length: 22' -H 'Content-Type: application/json' -d '{"name": "Bryan Best"}' http://university:8000/groups/
+INFO     logger:logger.py:32 Response status code: '201', elapsed_time: '0:00:00.034867'
+ {
+  "name": "Bryan Best",
+  "id": 9
+}
+
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIxLCJ1c2VybmFtZSI6ImdvbnphbGV6bWljaGFlbCIsImV4cCI6MTc3ODc3MjE1OSwiaWF0IjoxNzc4NzY0OTU5fQ.WRSFeR79TcY5XGBnCL3HlgvhAjChdu-qrjt9LIuUGmmeQzAq_eFzwIVcO9dGLUD0xjnkEj4RE2_ds6UuEEuUsC49YGI7zxwGnJJd37ddSn1lchWX0KC1NttwkRwkKYUhUUuWeLU6QqORMcVZS13PFJuvrw4Ej3SdLi87TY5e-VjMj67--Dn2eb6MkOZkDN58gPU1yvyPjD7Id2t2_HYNujYHThSuQzDMhQ0omlhgL3wIcWu48IB6DnSyChEizPFWhcz_B7EBMWUm-LYZax6KMenF0E7k54sYHFR1a6L9yMA8iWmsWmj6GGq2_zrdSbmTIN4POrn5BFeas3cAWEgFcA' -H 'Content-Length: 145' -H 'Content-Type: application/json' -d '{"first_name": "Michael", "last_name": "Blackburn", "email": "lmitchell@example.org", "degree": "Master", "phone": "+77813008299", "group_id": 9}' http://university:8000/students/
+INFO     logger:logger.py:32 Response status code: '201', elapsed_time: '0:00:00.028220'
+ {
+  "first_name": "Michael",
+  "last_name": "Blackburn",
+  "email": "lmitchell@example.org",
+  "degree": "Master",
+  "phone": "+77813008299",
+  "group_id": 9,
+  "id": 15
+}

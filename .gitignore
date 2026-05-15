@@ -21,7 +21,7 @@ coverage.xml
 
 
 
-.env
+
 auth_token.txt
 *.secret
 
@@ -35,5 +35,5 @@ artifacts/
 *.swp
 
 main.py
-docker-compose.yml
+allure-results
 

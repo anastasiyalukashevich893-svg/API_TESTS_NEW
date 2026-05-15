@@ -9,14 +9,10 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 COPY requirements.txt ./
 
 
-RUN pip install --no-cache-dir -r requirements.txt  pytest allure-pytest ruff
+RUN pip install --no-cache-dir -r requirements.txt
 
 
-COPY services/ ./services/
-COPY utils/ ./utils/
-COPY logger/ ./logger/
-COPY tests/ ./tests/
-COPY tests/conftest.py ./tests/
+COPY . .
 
 RUN mkdir -p /app/allure-results
 
