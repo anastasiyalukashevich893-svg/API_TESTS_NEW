@@ -47,6 +47,12 @@ services:
     depends_on:
       postgres_auth:
         condition: service_healthy
+    healthcheck:
+      test: [ "CMD", "python3", "-c", "import socket; s = socket.socket(); s.connect(('127.0.0.1', 8000))" ]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
 
 
   university:
@@ -65,6 +71,13 @@ services:
     depends_on:
       postgres_university:
         condition: service_healthy
+    healthcheck:
+      test: [ "CMD", "python3", "-c", "import socket; s = socket.socket(); s.connect(('127.0.0.1', 8000))" ]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+
 
   tests:
     build:
@@ -72,8 +85,10 @@ services:
       dockerfile: Dockerfile.tests
     container_name: api-tests
     depends_on:
-       - auth
-       - university
+      auth:
+        condition: service_healthy
+      university:
+          condition: service_healthy
     environment:
       AUTH_SERVICE_URL: http://auth:8000
       UNIVERSITY_SERVICE_URL: http://university:8000
