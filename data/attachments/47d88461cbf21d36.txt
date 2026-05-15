@@ -1,0 +1,18 @@
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 118' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kelleranthony&password=G5%262KzOuEdtap7q&password_repeat=G5%262KzOuEdtap7q&email=stephaniebowen%40example.com' http://auth:8000/auth/register/
+INFO     logger:logger.py:32 Response status code: '201', elapsed_time: '0:00:00.278045'
+ {
+  "detail": "User registered"
+}
+
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 49' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kelleranthony&password=G5%262KzOuEdtap7q' http://auth:8000/auth/login/
+INFO     logger:logger.py:32 Response status code: '200', elapsed_time: '0:00:00.312958'
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoia2VsbGVyYW50aG9ueSIsImV4cCI6MTc3ODg4NzgyNSwiaWF0IjoxNzc4ODgwNjI1fQ.XfKAUUtxrw6kqsM_6MFvPiemKFEtANpzIQUKNWK0X5UIQWLARcPwQuaufoemvnPR89ZJ5WpldcAHqwNq43mNc7gNgEhYX2HrHh7ekWV0EMxARppkhfhpd1h8Xbw1afTSf7p-2lvRbJ1PnXpd5sqEc7shNYNSbuA-ki2tn1joSwtHfdUX4x314dSI-EZbkWf2h_e_XAiy6LUVOTxiVKty1UxAQVJC-JoHzqNXNpudo3LxxlZ5s7eVACRErTWHKUUAlRr4t0HhzZHcsU3YINOduw8WIHCCsGOJ78TF9p86kl7eX0RqWWQNkGf9JT9F2EZu8uDwmQWUPwWrYPBky7RhVw",
+  "token_type": "Bearer"
+}
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 49' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kelleranthony&password=G5%262KzOuEdtap7q' http://auth:8000/auth/login/
+INFO     logger:logger.py:32 Response status code: '200', elapsed_time: '0:00:00.313128'
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoia2VsbGVyYW50aG9ueSIsImV4cCI6MTc3ODg4NzgyNSwiaWF0IjoxNzc4ODgwNjI1fQ.XfKAUUtxrw6kqsM_6MFvPiemKFEtANpzIQUKNWK0X5UIQWLARcPwQuaufoemvnPR89ZJ5WpldcAHqwNq43mNc7gNgEhYX2HrHh7ekWV0EMxARppkhfhpd1h8Xbw1afTSf7p-2lvRbJ1PnXpd5sqEc7shNYNSbuA-ki2tn1joSwtHfdUX4x314dSI-EZbkWf2h_e_XAiy6LUVOTxiVKty1UxAQVJC-JoHzqNXNpudo3LxxlZ5s7eVACRErTWHKUUAlRr4t0HhzZHcsU3YINOduw8WIHCCsGOJ78TF9p86kl7eX0RqWWQNkGf9JT9F2EZu8uDwmQWUPwWrYPBky7RhVw",
+  "token_type": "Bearer"
+}

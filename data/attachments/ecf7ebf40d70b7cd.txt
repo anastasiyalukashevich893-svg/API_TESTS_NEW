@@ -1,0 +1,30 @@
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 115' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=barry90&password=a8%5ER%2Bfzw%21Is3pk4&password_repeat=a8%5ER%2Bfzw%21Is3pk4&email=bmcintosh%40example.com' http://auth:8000/auth/register/
+INFO     logger:logger.py:32 Response status code: '201', elapsed_time: '0:00:00.260595'
+ {
+  "detail": "User registered"
+}
+
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 47' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=barry90&password=a8%5ER%2Bfzw%21Is3pk4' http://auth:8000/auth/login/
+INFO     logger:logger.py:32 Response status code: '200', elapsed_time: '0:00:00.301641'
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoiYmFycnk5MCIsImV4cCI6MTc3ODY4NDY5OCwiaWF0IjoxNzc4Njc3NDk4fQ.m7F-9yctakqczgLhTQWMxMRWD7yUWKy__mq4TRvOim9ILKewGfk4LygBYbhmNgVw2_ICn94EqrfOb5NKXSBEt2DHMnZ8oPNy3dnFZF3OzP1S2Ru2PKg3N43TlAY3zQ1SR1hJkHy-FUTJlXsvpZFM9zXTmnZFi28fY2o4l389gj0LLuAJ1xCSLtGR9joMOdQxFBJv8KCgqjDd-4aB1xO_68-dPvYNv0MdCLwWuaxjOFx7CnSMWYkKzMuWitwDenaSbfpUGk7fDE6-0VQehzKYNzFwQrgLLSoBluNr-DS7sgylUaYtgno5MT-Y3a6MkonUrW_z9wACYP9ieSySz-8AEw",
+  "token_type": "Bearer"
+}
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoiYmFycnk5MCIsImV4cCI6MTc3ODY4NDY5OCwiaWF0IjoxNzc4Njc3NDk4fQ.m7F-9yctakqczgLhTQWMxMRWD7yUWKy__mq4TRvOim9ILKewGfk4LygBYbhmNgVw2_ICn94EqrfOb5NKXSBEt2DHMnZ8oPNy3dnFZF3OzP1S2Ru2PKg3N43TlAY3zQ1SR1hJkHy-FUTJlXsvpZFM9zXTmnZFi28fY2o4l389gj0LLuAJ1xCSLtGR9joMOdQxFBJv8KCgqjDd-4aB1xO_68-dPvYNv0MdCLwWuaxjOFx7CnSMWYkKzMuWitwDenaSbfpUGk7fDE6-0VQehzKYNzFwQrgLLSoBluNr-DS7sgylUaYtgno5MT-Y3a6MkonUrW_z9wACYP9ieSySz-8AEw' -H 'Content-Length: 26' -H 'Content-Type: application/json' -d '{"name": "James Schwartz"}' http://university:8000/groups/
+INFO     logger:logger.py:32 Response status code: '201', elapsed_time: '0:00:00.026777'
+ {
+  "name": "James Schwartz",
+  "id": 3
+}
+
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoiYmFycnk5MCIsImV4cCI6MTc3ODY4NDY5OCwiaWF0IjoxNzc4Njc3NDk4fQ.m7F-9yctakqczgLhTQWMxMRWD7yUWKy__mq4TRvOim9ILKewGfk4LygBYbhmNgVw2_ICn94EqrfOb5NKXSBEt2DHMnZ8oPNy3dnFZF3OzP1S2Ru2PKg3N43TlAY3zQ1SR1hJkHy-FUTJlXsvpZFM9zXTmnZFi28fY2o4l389gj0LLuAJ1xCSLtGR9joMOdQxFBJv8KCgqjDd-4aB1xO_68-dPvYNv0MdCLwWuaxjOFx7CnSMWYkKzMuWitwDenaSbfpUGk7fDE6-0VQehzKYNzFwQrgLLSoBluNr-DS7sgylUaYtgno5MT-Y3a6MkonUrW_z9wACYP9ieSySz-8AEw' -H 'Content-Length: 145' -H 'Content-Type: application/json' -d '{"first_name": "Kaitlyn", "last_name": "Mitchell", "email": "pgamble@example.org", "degree": "Doctorate", "phone": "+75307436082", "group_id": 3}' http://university:8000/students/
+INFO     logger:logger.py:32 Response status code: '201', elapsed_time: '0:00:00.024821'
+ {
+  "first_name": "Kaitlyn",
+  "last_name": "Mitchell",
+  "email": "pgamble@example.org",
+  "degree": "Doctorate",
+  "phone": "+75307436082",
+  "group_id": 3,
+  "id": 5
+}

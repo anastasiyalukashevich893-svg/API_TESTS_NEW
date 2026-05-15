@@ -1,0 +1,20 @@
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 120' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=jenna60&password=Q%24jE%23DOySW0i%2BEm&password_repeat=Q%24jE%23DOySW0i%2BEm&email=laurenmartinez%40example.org' http://auth:8000/auth/register/
+INFO     logger:logger.py:32 Response status code: '201', elapsed_time: '0:00:00.316667'
+ {
+  "detail": "User registered"
+}
+
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 47' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=jenna60&password=Q%24jE%23DOySW0i%2BEm' http://auth:8000/auth/login/
+INFO     logger:logger.py:32 Response status code: '200', elapsed_time: '0:00:00.437433'
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjI1LCJ1c2VybmFtZSI6Implbm5hNjAiLCJleHAiOjE3Nzg3NzIxNzAsImlhdCI6MTc3ODc2NDk3MH0.h2y3o4yKvdM1oSCsnHHK7slOW0new0ia_6n-dzbSugBHI-kK4tRoTp79qEqaFYPTykKoUiN1Kul3RgkhpFBUGgE6QWdUGqm5SMJQVoDvsJ7GIpTHtEjFvig9cJkMk3s30vz1D9D5tOXiQH4a2wC-npTBrrhAbDoRR8huZHiuahKGQt34yTWzq211bHyc6wVrZhvy_zjP5eK53ozTfH9YNoq_PF80HIxLvCISJhyJROKO0ifqQa-v7H2eiWche13n51RQcHiytL33F9MWR7r-jw-9GTKdnFTP0UhWi5O2HZ_WC5Nc9pOyJ0Z14ctIcuDGM9P_C7h7k3GlkOhbDPQ-lQ",
+  "token_type": "Bearer"
+}
+INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjI1LCJ1c2VybmFtZSI6Implbm5hNjAiLCJleHAiOjE3Nzg3NzIxNzAsImlhdCI6MTc3ODc2NDk3MH0.h2y3o4yKvdM1oSCsnHHK7slOW0new0ia_6n-dzbSugBHI-kK4tRoTp79qEqaFYPTykKoUiN1Kul3RgkhpFBUGgE6QWdUGqm5SMJQVoDvsJ7GIpTHtEjFvig9cJkMk3s30vz1D9D5tOXiQH4a2wC-npTBrrhAbDoRR8huZHiuahKGQt34yTWzq211bHyc6wVrZhvy_zjP5eK53ozTfH9YNoq_PF80HIxLvCISJhyJROKO0ifqQa-v7H2eiWche13n51RQcHiytL33F9MWR7r-jw-9GTKdnFTP0UhWi5O2HZ_WC5Nc9pOyJ0Z14ctIcuDGM9P_C7h7k3GlkOhbDPQ-lQ' -H 'Content-Length: 69' -H 'Content-Type: application/json' -d '{"first_name": "Alex", "last_name": "Barker", "subject": "Geography"}' http://university:8000/teachers/
+INFO     logger:logger.py:32 Response status code: '201', elapsed_time: '0:00:00.026314'
+ {
+  "first_name": "Alex",
+  "last_name": "Barker",
+  "subject": "Geography",
+  "id": 10
+}

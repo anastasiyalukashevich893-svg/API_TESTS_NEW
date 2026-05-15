@@ -1,0 +1,20 @@
+[2026-05-14 13:22:48,773 - INFO] - Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 112' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=virginia54&password=%25xZ0TxHwsB2a%26hv&password_repeat=%25xZ0TxHwsB2a%26hv&email=scott58%40example.com' http://auth:8000/auth/register/
+[2026-05-14 13:22:48,774 - INFO] - Response status code: '201', elapsed_time: '0:00:00.299568'
+ {
+  "detail": "User registered"
+}
+
+[2026-05-14 13:22:49,289 - INFO] - Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 48' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=virginia54&password=%25xZ0TxHwsB2a%26hv' http://auth:8000/auth/login/
+[2026-05-14 13:22:49,290 - INFO] - Response status code: '200', elapsed_time: '0:00:00.471659'
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjI0LCJ1c2VybmFtZSI6InZpcmdpbmlhNTQiLCJleHAiOjE3Nzg3NzIxNjksImlhdCI6MTc3ODc2NDk2OX0.KfibSpp6yN809Hb3aARQxEIlsyEwj1JHthBSc3q-qZMNsmyyKqooCwLP6L1dmNHYtAVq8br_dr3qnsf97kUmWHVi3_CYzZylRPjARXcV1MvOSyt8EvYNgQueTn_j3M1fIHF_yJ78q-ATlAoPQ4844WZefoSBj3wosOF_0A2GxBOBhubkmm0ymzinTmpcZZ5r-he-UATYG_CFRemC-XVAClYoUDRjgpXu2RpDQxU0EJk6_7QTR077JXhDw7Z5_NxP5dkg6ac03csyrey-iHsJUi-NQ6V9Dpa4nD3G5-4AIz_1eJazUQbG_8m5hdq6Je1STx4PZsO-KUjEHfPOdTqo3g",
+  "token_type": "Bearer"
+}
+
+[2026-05-14 13:22:49,917 - INFO] - Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 48' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=virginia54&password=%25xZ0TxHwsB2a%26hv' http://auth:8000/auth/login/
+[2026-05-14 13:22:49,917 - INFO] - Response status code: '200', elapsed_time: '0:00:00.583629'
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjI0LCJ1c2VybmFtZSI6InZpcmdpbmlhNTQiLCJleHAiOjE3Nzg3NzIxNjksImlhdCI6MTc3ODc2NDk2OX0.KfibSpp6yN809Hb3aARQxEIlsyEwj1JHthBSc3q-qZMNsmyyKqooCwLP6L1dmNHYtAVq8br_dr3qnsf97kUmWHVi3_CYzZylRPjARXcV1MvOSyt8EvYNgQueTn_j3M1fIHF_yJ78q-ATlAoPQ4844WZefoSBj3wosOF_0A2GxBOBhubkmm0ymzinTmpcZZ5r-he-UATYG_CFRemC-XVAClYoUDRjgpXu2RpDQxU0EJk6_7QTR077JXhDw7Z5_NxP5dkg6ac03csyrey-iHsJUi-NQ6V9Dpa4nD3G5-4AIz_1eJazUQbG_8m5hdq6Je1STx4PZsO-KUjEHfPOdTqo3g",
+  "token_type": "Bearer"
+}
+

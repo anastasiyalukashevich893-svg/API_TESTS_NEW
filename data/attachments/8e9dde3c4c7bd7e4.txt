@@ -1,0 +1,6 @@
+[2026-05-13 14:15:30,395 - INFO] - Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 118' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=richardsonnina&password=Aq143%25%21consumer&password_repeat=Aq143%25%21consumer&email=itownsend%40example.com' http://auth:8000/auth/register/
+[2026-05-13 14:15:30,397 - INFO] - Response status code: '201', elapsed_time: '0:00:00.872188'
+ {
+  "detail": "User registered"
+}
+
