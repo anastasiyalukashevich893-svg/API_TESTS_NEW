@@ -51,7 +51,7 @@ jobs:
   report-and-deploy:
     runs-on: ubuntu-latest
     needs: test
-    if: always() && github.event_name == 'push' && github.ref == 'refs/heads/empty'
+    if: always() && github.event_name == 'push' && github.ref == 'refs/heads/full-project'
     steps:
       - uses: actions/checkout@v4
 
