@@ -1,0 +1,22 @@
+[2026-05-17 11:50:38,336 - INFO] - Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 116' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=timothyowens&password=iaE6G1T%21kd%21j1nR&password_repeat=iaE6G1T%21kd%21j1nR&email=cerickson%40example.org' http://auth:8000/auth/register/
+[2026-05-17 11:50:38,336 - INFO] - Response status code: '201', elapsed_time: '0:00:00.273962'
+ {
+  "detail": "User registered"
+}
+
+[2026-05-17 11:50:38,695 - INFO] - Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 50' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=timothyowens&password=iaE6G1T%21kd%21j1nR' http://auth:8000/auth/login/
+[2026-05-17 11:50:38,696 - INFO] - Response status code: '200', elapsed_time: '0:00:00.318124'
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoidGltb3RoeW93ZW5zIiwiZXhwIjoxNzc5MDI1ODM4LCJpYXQiOjE3NzkwMTg2Mzh9.gC-NhlfUuthAUtUgqliG2MkfB1Es9U0MeR_38MwUGAJ6fqbjgYoG8npH4WIR4cfSsHCpLbUhqm7jQ-_LkNm4eCMKSWrw74RPAoLTBOhjy3dBHHhmPHjXsY9DV3s21q0UXC9o54XHLioZzcdx-KXpcwh4GQRy3-IVn2bs6PoD0bH0-kLpKMk1WCN4MKmYwQoHulbKVVJ8AGNIBM_orjR7PQs0WEDvYXizjjyoK1VEb5i2NRnbMFR74s8aCFE_l_maOCjtLuT3q3FMwyH59bn7uYoXkNqXYKHDyOJv1CrJmoXxtifNkk0lt7hjGt8MZoxdVVpTwfNr9Ic2lChwB_CpFg",
+  "token_type": "Bearer"
+}
+
+[2026-05-17 11:50:38,731 - INFO] - Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoidGltb3RoeW93ZW5zIiwiZXhwIjoxNzc5MDI1ODM4LCJpYXQiOjE3NzkwMTg2Mzh9.gC-NhlfUuthAUtUgqliG2MkfB1Es9U0MeR_38MwUGAJ6fqbjgYoG8npH4WIR4cfSsHCpLbUhqm7jQ-_LkNm4eCMKSWrw74RPAoLTBOhjy3dBHHhmPHjXsY9DV3s21q0UXC9o54XHLioZzcdx-KXpcwh4GQRy3-IVn2bs6PoD0bH0-kLpKMk1WCN4MKmYwQoHulbKVVJ8AGNIBM_orjR7PQs0WEDvYXizjjyoK1VEb5i2NRnbMFR74s8aCFE_l_maOCjtLuT3q3FMwyH59bn7uYoXkNqXYKHDyOJv1CrJmoXxtifNkk0lt7hjGt8MZoxdVVpTwfNr9Ic2lChwB_CpFg' -H 'Content-Length: 76' -H 'Content-Type: application/json' -d '{"first_name": "Christopher", "last_name": "Bush", "subject": "Mathematics"}' http://university:8000/teachers/
+[2026-05-17 11:50:38,731 - INFO] - Response status code: '201', elapsed_time: '0:00:00.033599'
+ {
+  "first_name": "Christopher",
+  "last_name": "Bush",
+  "subject": "Mathematics",
+  "id": 1
+}
+

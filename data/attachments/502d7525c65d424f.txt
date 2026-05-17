@@ -1,0 +1,6 @@
+[2026-05-17 11:50:41,781 - INFO] - Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 27' -H 'Content-Type: application/json' -d '{"name": "Charles Andrews"}' http://university:8000/groups/
+[2026-05-17 11:50:41,781 - INFO] - Response status code: '403', elapsed_time: '0:00:00.002133'
+ {
+  "detail": "Access denied"
+}
+
