@@ -1,0 +1,52 @@
+line-length = 100
+target-version = "py311"
+
+exclude = [
+    ".git",
+    ".venv",
+    ".env",
+    "__pycache__",
+]
+[lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "I",
+    "C",
+    "B",
+    "UP",
+    "RUF",
+    "SIM",
+    "TID",
+    "PL",
+    "FLY",
+]
+ignore = [
+    "E501",
+    "B008",
+    "PLR0913",
+    "S101",
+]
+[lint.isort]
+known-first-party = ["services", "utils", "logger", "tests"]
+known-third-party = ["pytest", "requests", "faker", "pydantic"]
+combine-as-imports = true
+force-single-line = false
+
+[lint.per-file-ignores]
+"tests/*" = [
+    "S101",
+    "PLR2004",
+    "S311",
+]
+"services/*/models/*" = [
+    "RUF012",
+]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+preview = true
