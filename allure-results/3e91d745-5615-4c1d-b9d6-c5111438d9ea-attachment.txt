@@ -1,5 +1,0 @@
-INFO     logger:logger.py:32 Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 110' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=andrewgreen&password=Aq143%25%21hit&password_repeat=Aq143%25%21hit&email=bennettrebecca%40example.net' http://auth:8000/auth/register/
-INFO     logger:logger.py:32 Response status code: '201', elapsed_time: '0:00:00.869544'
- {
-  "detail": "User registered"
-}

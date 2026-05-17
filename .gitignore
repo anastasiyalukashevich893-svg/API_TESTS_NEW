@@ -36,4 +36,4 @@ artifacts/
 
 main.py
 allure-results
-
+.env

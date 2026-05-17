@@ -1,6 +1,0 @@
-[2026-05-14 13:22:54,561 - INFO] - Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 26' -H 'Content-Type: application/json' -d '{"name": "Carlos Griffin"}' http://university:8000/groups/
-[2026-05-14 13:22:54,562 - INFO] - Response status code: '403', elapsed_time: '0:00:00.006349'
- {
-  "detail": "Access denied"
-}
-

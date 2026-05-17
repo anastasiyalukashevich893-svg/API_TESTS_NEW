@@ -1,6 +1,0 @@
-[2026-05-14 13:22:33,129 - INFO] - Request: curl -H 'User-Agent: python-requests/2.31.0' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 35' -H 'Content-Type: application/x-www-form-urlencoded' -d 'teacher_id=67&student_id=85&grade=3' http://university:8000/grades/
-[2026-05-14 13:22:33,129 - INFO] - Response status code: '403', elapsed_time: '0:00:00.091543'
- {
-  "detail": "Access denied"
-}
-
